@@ -1,0 +1,10 @@
+## Getting error from kernel exectution 
+
+
+cudaError_t  err = cudaMalloc((void**) &A_d, size);
+
+if (err != cudaSuccess){
+    printf("%s in %s at line %d \n", cudaGetErrorString(err), __FILE__, __LINE__);
+    exit(EXIT_FAILURE);
+}
+
